@@ -1,0 +1,10 @@
+package moodle_clone.backend.adapter.in.web.dto.user;
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
+public record UpdateEmailRequest(
+        @NotBlank(message = "O email não pode ser vazio")
+        @Email(message = "Email inválido")
+        String email
+) {}
